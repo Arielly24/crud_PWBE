@@ -1,12 +1,8 @@
 <?php
+    session_start();
 
-session_start();
-
-if (isset($_SESSION['idSessao'])){
-
+    if (isset($_SESSION['idSessao'])) {
     header('location: ./listagem/');
-} else{
-    header('location: ./login/')
-}
-
-?>
+    } else {
+        header('location: ./login/');
+    }
